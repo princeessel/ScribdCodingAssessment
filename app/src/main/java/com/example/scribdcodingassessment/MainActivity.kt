@@ -52,6 +52,19 @@ fun BookList(viewModel: BookViewModel = viewModel()) {
     }
 }
 
+@Composable
+fun BookDetails(viewModel: BookViewModel = viewModel()) {
+    val state by viewModel.data.collectAsState()
+    LazyColumn(
+        modifier = Modifier.padding(top = 64.dp)
+    ) {
+        items(state.books) {
+            BookCard(it)
+            BookDetails(viewModel)
+        }
+    }
+}
+
 
 @Preview(showBackground = true)
 @Composable
