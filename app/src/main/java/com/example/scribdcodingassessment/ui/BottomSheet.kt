@@ -64,7 +64,11 @@ fun BottomSheet(viewModel: BookViewModel = viewModel()) {
                             .padding(start = 16.dp, top = 16.dp)
                             .weight(1f)
                     )
-                    IconButton(onClick = { /*TODO*/ }) {
+                    IconButton(onClick = {
+                        scope.launch {
+                            modalBottomSheetState.hide()
+                        }
+                    }) {
                         Icon(Icons.Default.Close, contentDescription = null)
                     }
                 }

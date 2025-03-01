@@ -98,4 +98,6 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-livedata:1.6.2")
     implementation("androidx.compose.material:material:1.6.2")
 
+    implementation("androidx.paging:paging-compose:3.2.1")
+
 }
